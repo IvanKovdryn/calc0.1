@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calc2</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./icon/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-title">Калькулятор вартості ремонту</div>
+        <div class="subtitle">
+          Базова ціна: 1 м² <span>=</span> 6 тис. гривень
+        </div>
+      </div>
+    </header>
+    <form action="" class="form">
+      <div class="container">
+        <div class="square">
+          <div class="square-title">
+            <div class="square-top">
+              <span class="square-text title">Площа квартири: </span>
+              <input
+                id="square-number"
+                type="number"
+                class="square-input"
+                value="100"
+              />
+              <span class="square-text title">м²</span>
+            </div>
+            <div class="square-bottom">
+              <input
+                id="square-range"
+                type="range"
+                class="square-range"
+                min="0"
+                max="200"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="repair item">
+          <div class="repair-title title">Тип ремонту</div>
+          <div class="repair-checkboxs">
+            <div class="cosmetic item-name">
+              <div class="item-text">
+                <input
+                  checked
+                  name="type"
+                  id="cosmetic"
+                  type="radio"
+                  class="repair-cosmetic-input input"
+                  value="1"
+                />
+                <label class="repair-cosmetic-label label" for="cosmetic">
+                  <div class="label-top">Косметичний</div>
+                </label>
+              </div>
+            </div>
+            <div class="capital item-name">
+              <div class="capital-text item-text">
+                <input
+                  name="type"
+                  id="capital"
+                  type="radio"
+                  class="repair-capital-input input"
+                  value="1.3"
+                />
+                <label class="repair-capital-label label" for="capital">
+                  <div class="label-top">Капітальний</div>
+                  <span class="label-span">+30% до вартості</span>
+                </label>
+              </div>
+            </div>
+            <div class="key item-name">
+              <div class="key-text item-text">
+                <input
+                  name="type"
+                  id="key"
+                  type="radio"
+                  class="repair-key-input input"
+                  value="1.5"
+                />
+                <label for="key" class="repair-key-label label">
+                  <div class="label-top">Під ключ</div>
+                  <span class="label-span">+50% до вартості</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home item">
+          <div class="home-title title">Тип дому</div>
+          <div class="home-checkboxs">
+            <div class="new item-name">
+              <div class="new-text item-text">
+                <input
+                  checked
+                  name="home"
+                  id="new"
+                  type="radio"
+                  class="home-new-input input"
+                  value="1"
+                />
+                <label class="home-new-label label" for="new">
+                  <div class="label-top">Новострій</div>
+                </label>
+              </div>
+            </div>
+            <div class="second item-name">
+              <div class="second-text item-text">
+                <input
+                  name="home"
+                  id="second"
+                  type="radio"
+                  class="home-second-input input"
+                  value="1.1"
+                />
+                <label class="home-second-label label" for="second">
+                  <div class="label-top">Вторинка</div>
+                  <span class="label-span">+10% до вартості</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="room item">
+          <div class="room-title title">Кількість кімнат:</div>
+          <div class="room-row">
+            <input
+              name="room-name"
+              id="room-c"
+              class="room-column"
+              value="0.9"
+              type="radio"
+            />
+            <label for="room-c" class="room-label">C</label>
+            <input
+              checked
+              name="room-name"
+              id="room-1"
+              class="room-column"
+              value="1"
+              type="radio"
+            />
+            <label for="room-1" class="room-label">1</label>
+            <input
+              name="room-name"
+              id="room-2"
+              class="room-column"
+              value="2"
+              type="radio"
+            />
+            <label for="room-2" class="room-label">2</label>
+            <input
+              name="room-name"
+              id="room-3"
+              class="room-column"
+              value="3"
+              type="radio"
+            />
+            <label for="room-3" class="room-label">3</label>
+            <input
+              name="room-name"
+              id="room-4"
+              class="room-column"
+              value="4"
+              type="radio"
+            />
+            <label for="room-4" class="room-label">4</label>
+            <input
+              name="room-name"
+              id="room-5"
+              class="room-column"
+              value="5"
+              type="radio"
+            />
+            <label for="room-5" class="room-label">5</label>
+          </div>
+        </div>
+        <div class="more item">
+          <div class="more-title title">Тип ремонту</div>
+          <div class="more-checkboxs">
+            <div class="stretch item-name">
+              <div class="stretch-text item-text">
+                <input
+                  id="stretch"
+                  type="checkbox"
+                  class="more-stretch-input input"
+                  name="more"
+                  value="1.1"
+                />
+                <label class="more-stretch-label more-label" for="stretch">
+                  <span class="icon-check"></span>
+                  <div class="label-top">Натяжні стелі</div>
+                  <span class="label-span">+10% до вартості</span>
+                </label>
+              </div>
+            </div>
+            <div class="paint item-name">
+              <div class="paint-text item-text">
+                <input
+                  id="paint"
+                  type="checkbox"
+                  class="more-paint-input input"
+                  name="walls"
+                  value="1.1"
+                />
+                <label class="more-paint-label more-label" for="paint">
+                  <span class="icon-check"></span>
+                  <div class="label-top">Покраска стін</div>
+                  <span class="label-span">+10% до вартості</span>
+                </label>
+              </div>
+            </div>
+            <div class="warm item-name">
+              <div class="warm-text item-text">
+                <input
+                  id="warm"
+                  type="checkbox"
+                  class="more-warm-input input"
+                  name="ceil"
+                  value="1.1"
+                />
+                <label for="warm" class="more-warm-label more-label">
+                  <span class="icon-check"></span>
+                  <div class="label-top">Тепла підлога</div>
+                  <span class="label-span">+10% до вартості</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sum">
+        <div class="sum-cost">Вартість ремонту:</div>
+        <div class="sum-count"><span class="sum-number">0</span> гривень</div>
+      </div>
+    </form>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
